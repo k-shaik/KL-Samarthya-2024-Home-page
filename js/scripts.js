@@ -71,11 +71,17 @@ Function Page Load
 		}
 		
 		// Fading Out Loadbar on Finised
+
+
+		
+		
 		setTimeout(function(){
 			$('.loadbar').append('<span class="hold-progress-bar"></span>');
-			$('body').append('<audio loop autoplay volume="0" id="audio"><source src="sound.mp3" type="audio/mpeg" /></audio>');
+			$('body').append('<audio loop autoplay volume="0.2" id="audio"> <source src="sound.mp3" type="audio/mpeg" /></audio>');
 			var audio = document.getElementById("audio");    
 			audio.volume = 0.2;
+			
+
 			TweenMax.to($('.hold-progress-bar'), 1, {force3D:true,width:'100%', delay:0.1, ease:Power2.easeOut, onComplete:function(){
 				TweenMax.set($(".trackbar"), {visibility:'hidden', opacity:0});
 				$('body').waitForImages({
@@ -178,11 +184,12 @@ Function Page Load
 				
 			}});
 	  
-		}, time);
+		}, 2000);
 		
 		
 		
 	}// End Page Load
+// });
 		
 
 
